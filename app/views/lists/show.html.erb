@@ -4,14 +4,12 @@
 <ul>
   <ol>
     <ol>Name: <%= @list.name %></ol>
+    <% if @list.image.attached? %>
+    <ol><%= cl_image_tag @list.image.key, width: 300 %></ol>
+    <% end %>
     <ol><%= link_to "Delete",
       list_path(@list),
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
     %></ol>
-    <% if @list.image.attached? %>
-    <ol><%= cl_image_tag @list.image.key, width: 300 %></ol>
-    <% end %>
-
-
   </ol>
 </ul>
