@@ -2,5 +2,5 @@ class List < ApplicationRecord
   has_many :bookmarks
   has_many :movies, through: :bookmarks, dependent: :destroy
   validates :name, presence: true, uniqueness: true
-  # comment for test
+  has_one_attached :image
 end

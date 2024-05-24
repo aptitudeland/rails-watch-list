@@ -3,7 +3,11 @@
 <ul>
   <ol>
     <% @lists.each do |list| %>
-    <li><%= link_to list.name , list %> <img src="<%= list.image_url %>" width="100" height="50"></li>
+    <li><%= link_to list.name , list %>
+        <% if list.image.attached? %>
+          <%= cl_image_tag(list.image.key, width: 40) %>
+        <% end %>
+      </li>
     <% end %>
   </ol>
 </ul>

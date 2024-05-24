@@ -8,7 +8,10 @@
       list_path(@list),
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
     %></ol>
-    <ol><img src="<%= @list.image_url %>"></ol>
+    <% if @list.image.attached? %>
+    <ol><%= cl_image_tag @list.image.key, width: 300 %></ol>
+    <% end %>
+
 
   </ol>
 </ul>
