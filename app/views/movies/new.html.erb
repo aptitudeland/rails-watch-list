@@ -1,0 +1,8 @@
+<h3>New movie</h3>
+
+<%= simple_form_for(@movie) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :overview %>
+  <%= f.input :rating %>
+  <%= f.submit %>
+<% end %>

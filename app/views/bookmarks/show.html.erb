@@ -1,0 +1,12 @@
+<h3>Bookmarks show</h3>
+<h5><%= link_to "Back to all bookmarks", bookmarks_path %></h5>
+
+<ul>
+  <ol>
+    <ol>Comment: <%= @bookmark.comment %></ol>
+    <ol><%= link_to "Delete",
+      bookmark_path(@bookmark),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %></ol>
+  </ol>
+</ul>

@@ -1,0 +1,10 @@
+<h3>Bookmarks index</h3>
+
+<ul>
+  <ol>
+    <% @bookmarks.each do |bookmark| %>
+    <li><%= link_to bookmark.comment , bookmark %></li>
+    <% end %>
+  </ol>
+</ul>
+<%= link_to "Create New Bookmark", new_bookmark_path %>

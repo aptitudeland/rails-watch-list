@@ -1,0 +1,12 @@
+<h3>Lists show</h3>
+<h5><%= link_to "Back to all lists", lists_path %></h5>
+
+<ul>
+  <ol>
+    <ol>Name: <%= @list.name %></ol>
+    <ol><%= link_to "Delete",
+      list_path(@list),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %></ol>
+  </ol>
+</ul>

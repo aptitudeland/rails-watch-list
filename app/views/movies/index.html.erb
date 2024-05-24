@@ -1,0 +1,10 @@
+<h3>Movies index</h3>
+
+<ul>
+  <ol>
+    <% @movies.each do |movie| %>
+    <li><%= link_to movie.title , movie %></li>
+    <% end %>
+  </ol>
+</ul>
+<%= link_to "Create New Movie", new_movie_path %>
